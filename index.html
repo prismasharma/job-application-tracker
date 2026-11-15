@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JobTrack | Job Application Manager</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2 class="logo">JobTrack</h2>
+
+            <nav>
+                <ul>
+                    <li class="active">Dashboard</li>
+                    <li>My Applications</li>
+                    <li>Interviews</li>
+                    <li>Settings</li>
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="top-header">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Track and manage your job search.</p>
+                </div>
+
+                <button id="add-job-btn">
+                    + Add Application
+                </button>
+
+            </header>
+
+
+            <!-- Statistics -->
+            <section class="stats-container">
+
+                <div class="stat-card">
+                    <h3>Total Applications</h3>
+                    <p id="total-applications">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Interviews</h3>
+                    <p id="total-interviews">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Offers</h3>
+                    <p id="total-offers">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Rejected</h3>
+                    <p id="total-rejected">0</p>
+                </div>
+
+            </section>
+
+<!-- Add Application Form -->
+
+<section class="form-section" id="form-section" hidden>
+
+    <h2>Add New Application</h2>
+
+    <form id="job-form">
+
+        <input
+            type="text"
+            id="company"
+            placeholder="Company Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="position"
+            placeholder="Job Position"
+            required
+        >
+
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+        <select id="status">
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Offered">Offered</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <button type="submit">Save Application</button>
+
+        <button type="button" id="cancel-btn">
+            Cancel
+        </button>
+
+    </form>
+
+</section>
+
+
+
+            <!-- Applications -->
+            <section class="applications-section">
+
+                <h2>Recent Applications</h2>
+
+<div class="filters">
+
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Search company or position..."
+    >
+
+    <select id="filter-status">
+        <option value="All">All Applications</option>
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Offered">Offered</option>
+        <option value="Rejected">Rejected</option>
+    </select>
+
+</div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Position</th>
+                                <th>Date Applied</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="application-list">
+
+                            <!-- JavaScript will add applications here -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
