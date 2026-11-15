@@ -8,7 +8,7 @@ A web-based application designed to help job seekers organize, manage, and track
 
 ## 📸 Screenshot
 
-![Job Application Tracker Dashboard](screenshots/dashboard.png)
+![Job Application Tracker Dashboard](dashboard.png)
 
 ## ✨ Features
 
